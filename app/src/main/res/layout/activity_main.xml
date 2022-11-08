@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#251B37"
+    tools:context=".MainActivity">
+
+    <!--Adding a ListView -->
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="409dp"
+        android:layout_height="601dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Adding a TextView -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:text="@string/note"
+        android:textColor="#FFCACA"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/scanButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/micButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MIC"
+        android:textColor="#FFCACA"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        android:backgroundTint="#372948"
+        android:background="@drawable/round_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textView2"
+        />
+    <Button
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMAGE"
+        android:textSize="25dp"
+        android:background="@drawable/round_btn"
+        android:textColor="#FFCACA"
+        android:textStyle="italic"
+        android:backgroundTint="#372948"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textView2"
+
+         />
+
+    <Button
+        android:id="@+id/scanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#372948"
+        android:background="@drawable/round_btn"
+        android:text="QR Scan"
+        android:textColor="#FFCACA"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        app:layout_constraintBaseline_toTopOf="@id/listView"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintLeft_toRightOf="@id/micButton"
+        app:layout_constraintRight_toLeftOf="@id/imageButton"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
